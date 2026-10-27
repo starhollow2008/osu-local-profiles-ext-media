@@ -1,0 +1,9 @@
+# Affinity source files are large binaries that change wholesale on every save,
+# so they live in Git LFS (install git-lfs and run `git lfs install` once).
+*.af filter=lfs diff=lfs merge=lfs -text
+*.afdesign filter=lfs diff=lfs merge=lfs -text
+*.afphoto filter=lfs diff=lfs merge=lfs -text
+*.afpub filter=lfs diff=lfs merge=lfs -text
+
+# Exports are small; keep them as plain binaries so git never rewrites line endings.
+*.png binary
